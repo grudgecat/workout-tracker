@@ -28,7 +28,7 @@ router.put('/:id', async (req, res) => {
         res.json(workoutData);
     }
     catch (err) {
-        res.status(500).json(error.message);
+        res.status(500).json(err.message);
     }
 });
 
@@ -39,8 +39,8 @@ router.post('/', async (req, res) => {
         workoutData = await Workout.create(req.body);
         res.json(workoutData);
     }
-    catch {
-        res.status(500).json(error.message);
+    catch (err) {
+        res.status(500).json(err.message);
     }
 });
 
@@ -62,7 +62,7 @@ router.get('/range', async (req, res) => {
             res.json(lastSeven);
         }
     }
-    catch {
+    catch (err) {
         res.status(500).json(error.message);
     }
 });

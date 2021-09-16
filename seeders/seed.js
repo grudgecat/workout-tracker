@@ -1,6 +1,12 @@
 const mongoose = require('mongoose');
 const db = require('../models');
-require('dotenv').config();
+const dotenv = require('dotenv').config();
+
+
+// if (dotenv.error) {
+//   throw dotenv.error
+// }
+// console.log(dotenv); 
 
 mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
@@ -90,7 +96,7 @@ const workoutSeed = [
     exercises: [
       {
         type: 'resistance',
-        name: 'Quad Press',
+        name: 'Leg Lift',
         duration: 30,
         weight: 300,
         reps: 10,
