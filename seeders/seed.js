@@ -8,7 +8,7 @@ const dotenv = require('dotenv').config();
 // }
 // console.log(dotenv); 
 
-mongoose.connect(process.env.MONGODB_URI, {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workouts", {
   useNewUrlParser: true,
   useFindAndModify: false,
   useUnifiedTopology: true,

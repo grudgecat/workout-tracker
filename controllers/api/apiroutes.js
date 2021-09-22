@@ -18,10 +18,6 @@ router.get('/', async (req, res) => {
 //update workout with exercises, /api/workouts/:id
 router.put('/:id', async (req, res) => {
     try {
-        console.log(req.params.id);
-        console.log('put workout id called');
-        console.log(req.body);
-
         const workoutData = await Workout.findOneAndUpdate({ _id: req.params.id }, {
             $push: { exercises: req.body }
         });
@@ -35,7 +31,6 @@ router.put('/:id', async (req, res) => {
 //add new empty workout, /api/workouts
 router.post('/', async (req, res) => {
     try {
-        // console.log('post workout id called'); 
         workoutData = await Workout.create(req.body);
         res.json(workoutData);
     }
@@ -54,11 +49,9 @@ router.get('/range', async (req, res) => {
 
         if (workoutData.length < 8) {
             res.json(workoutData);
-            console.log('less than 8');
         }
         else {
             const lastSeven = workoutData.splice(-7);
-            console.log('more than 7');
             res.json(lastSeven);
         }
     }
