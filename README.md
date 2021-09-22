@@ -14,7 +14,7 @@ Purpose: This project was created to explore MongoDB/Mongoose with continued pra
 ![screen cap of Readme generator](/public/img/screencap.png)
 
 ## Project Links
-GitHub Source Code:  https://github.com/grudgecat/workout-tracker
+GitHub Source Code:  https://github.com/grudgecat/workout-tracker  
 Heroku link:   https://morning-ridge-36623.herokuapp.com/
 
 ***
